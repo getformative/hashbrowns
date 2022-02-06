@@ -3,7 +3,7 @@ description: A static color generator that uses a value's hashcode to generate p
 version: 0.1.1
 repository: https://github.com/getformative/hashbrowns.git
 environment:
-  sdk: ">=2.0.0 <3.0.0"
+  sdk: ">=2.12.0 <3.0.0"
   flutter: ">=1.17.0"
 
 dependencies:
