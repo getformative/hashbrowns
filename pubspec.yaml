@@ -1,8 +1,7 @@
 name: hashbrowns
 description: A static color generator
-version: 0.0.1
-repository: https://github.com/sdstolworthy/hashbrowns.git
-
+version: 0.0.2
+repository: https://github.com/getformative/hashbrowns.git
 environment:
   sdk: ">=2.16.0 <3.0.0"
   flutter: ">=1.17.0"
