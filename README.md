@@ -12,14 +12,14 @@ class Genre {
 
 class GenrePill extends StatelessWidget {
   final Genre genre;
-  late final Hashbrown hashbrown;
+  late final Hashbrowns hashbrowns;
   GenrePill(this.genre) {
-    this.hashbrown = Hashbrown.pastels();
+    this.hashbrowns = Hashbrowns.pastels();
   };
 
   @override
   Widget build(BuildContext context) {
-    final color = hashbrown.generateColor(genre);
+    final color = hashbrowns.generateColor(genre);
     return Container(
       color: color.surfaceColor,
       child: Text(genre.name, style: TextStyle(color: color.onSurfaceColor))

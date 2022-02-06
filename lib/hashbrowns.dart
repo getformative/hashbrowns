@@ -63,17 +63,17 @@ class ColorSet {
 /// The Hashbrown accepts as a constructor parameter a [ColorGenerator], which can be used to customize the color generation behavior of the library.
 /// By default, Hashbrown includes two color generation strategies, `pastels` and `bold`.
 /// The hashbrown class provides factories to access these generators: `Hashbrown.pastels()` and `Hashbrown.bold()`
-class Hashbrown {
+class Hashbrowns {
   ColorGenerator _colorGenerator;
-  factory Hashbrown.bold() {
-    return Hashbrown(_boldGenerator);
+  factory Hashbrowns.bold() {
+    return Hashbrowns(_boldGenerator);
   }
-  factory Hashbrown.pastels() {
-    return Hashbrown(_pastelGenerator);
+  factory Hashbrowns.pastels() {
+    return Hashbrowns(_pastelGenerator);
   }
   ColorSet generateColor(int hashcode) {
     return _colorGenerator(hashCode);
   }
 
-  Hashbrown(this._colorGenerator);
+  Hashbrowns(this._colorGenerator);
 }
