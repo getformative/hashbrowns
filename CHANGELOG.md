@@ -1,3 +1,5 @@
+## 0.1.2
+* added example
 ## 0.1.1
 * Updated pubspec to match pub.dev requirements
 * Improved class and method documentation
