@@ -1,6 +1,6 @@
-# Hashbrown Static Color Generator
+# Hashbrowns Static Color Generator
 
-The purpose of Hashbrown is to generate consistent colors based on the hashcode of an object.
+The purpose of Hashbrowns is to generate consistent colors based on the hashcode of an object.
 
 ## Usage
 
@@ -22,7 +22,7 @@ class GenrePill extends StatelessWidget {
     final color = hashbrown.generateColor(genre);
     return Container(
       color: color.surfaceColor,
-      child: Text(genre.name, style: TextStyle(color.onSurfaceColor))
+      child: Text(genre.name, style: TextStyle(color: color.onSurfaceColor))
     );
   }
 }
