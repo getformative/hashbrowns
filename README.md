@@ -18,7 +18,7 @@ class GenrePill extends StatelessWidget {
   };
 
   @override
-  WIdget build(BuildContext context) {
+  Widget build(BuildContext context) {
     final color = hashbrown.generateColor(genre);
     return Container(
       color: color.surfaceColor,
