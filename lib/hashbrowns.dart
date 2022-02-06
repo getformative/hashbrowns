@@ -1,6 +1,11 @@
+/// Hashbrowns allows consistent color generation based on hashcodes.
+/// Simply create a `Hashbrowns` instance, and pass a hashcode to `generateColor`,
+/// and you will get the same color every time for the same hashcode.
+///`This works especially well for string constants whose hashcodes are consistent
+/// across instances.
 library hashbrowns;
 
-import 'package:flutter/widgets.dart';
+import 'package:flutter/material.dart';
 
 /// A [ColorGenerator] generates a colorset based on a seed integer. Given equal seed integers, the ColorSet should also be the same.
 typedef ColorGenerator = ColorSet Function(int);
@@ -65,12 +70,19 @@ class ColorSet {
 /// The hashbrown class provides factories to access these generators: `Hashbrown.pastels()` and `Hashbrown.bold()`
 class Hashbrowns {
   ColorGenerator _colorGenerator;
+
+  /// `Hashbrowns.bold()` creates an instance of [Hashbrowns] that produces vibrant surface colors and a contrasting text color
   factory Hashbrowns.bold() {
     return Hashbrowns(_boldGenerator);
   }
+
+  /// `Hashbrowns.pastels()` factory instantiates a [Hashbrowns] class with a pastel color generator.
+  /// This will create a background color with a high luminance, and a darker shade foreground color.
   factory Hashbrowns.pastels() {
     return Hashbrowns(_pastelGenerator);
   }
+
+  /// `generateColor` takes a hashcode (or any other integer) as a parameter and generates a [ColorSet].
   ColorSet generateColor(int hashcode) {
     return _colorGenerator(hashCode);
   }
